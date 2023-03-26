@@ -1,6 +1,6 @@
 let ham = document.getElementById("ham");
 let ul = document.getElementById("ul");
-ham.addEventListener("mouseover", () => {
+ham.addEventListener("click", () => {
   ul.classList.add("ul");
 });
 ham.addEventListener("mouseout", () => {
