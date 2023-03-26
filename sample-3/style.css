@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: Inter-variable;
-  src: url(./Inter-VariableFont_slnt\,wght.ttf);
+  src: url(./Inter-VariableFont_slnt\wght.ttf);
 }
 @font-face {
   font-family: Inter-bold;
@@ -44,7 +44,8 @@ nav {
 nav img {
   display: none;
 }
-nav svg {
+nav #logo {
+  display: block;
   margin: auto 0;
 }
 ul {
@@ -177,21 +178,24 @@ section p {
   }
   .ul {
     display: block;
-    right: 0;
-    /* display: none; */
-    position: absolute;
     height: 100vh;
-    /* width: 100vw; */
+    position: absolute;
+    top: 0%;
+    right: 0;
+    width: 70vw;
     background-color: white;
   }
   nav img {
     display: block;
-    margin-left: 25vw;
+    margin-left: 30vw;
   }
   li {
-    margin: 2vh 2vw;
+    margin: 4vh 8vw;
     font-size: 1.5em;
     color: black;
+  }
+  li:first-child {
+    margin-top: 25vh;
   }
   main {
     display: block;
