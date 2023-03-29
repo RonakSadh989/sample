@@ -1,0 +1,209 @@
+@font-face {
+  font-family: Hank;
+  src: url(HankenGrotesk-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Hank-b;
+  src: url(HankenGrotesk-Bold.ttf);
+}
+@font-face {
+  font-family: Hank-eb;
+  src: url(HankenGrotesk-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Hank-m;
+  src: url(HankenGrotesk-Medium.ttf);
+}
+
+:root {
+  --txt: #c2b7ff;
+  --grey: #cdc1ff;
+  --l-red: #fff6f5;
+  --red: #e27a7a;
+  --l-yellow: #fffbf2;
+  --yellow: #ddc36f;
+  --l-green: #f2fbfa;
+  --green: #419d88;
+  --l-blue: #f3f3fd;
+  --blue: #3c4baa;
+  --g-l-blue: #6743ff;
+  --g-blue: #312ceb;
+  --cg-blue: #4c23ca;
+  --cg-l-blue: #4633ed;
+  --btn: #303b59;
+  --active-l-blue: #6341fa;
+  --active-blue: #342ce4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Hank-b;
+  transition: all 300ms;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 45vw;
+  aspect-ratio: 16/11;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 25px 25px 50px #d4d4d4, -25px -25px 50px #ffffff;
+}
+.left {
+  display: grid;
+  place-items: center;
+  padding: 1vh 1vw;
+  background-image: linear-gradient(
+    to top,
+    var(--g-blue) 0%,
+    var(--g-l-blue) 65%
+  );
+  border-radius: 20px;
+  color: var(--txt);
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom,
+    var(--cg-blue) 50%,
+    var(--cg-l-blue) 100%
+  );
+  border-radius: 50%;
+  /* width: 10vw; */
+  aspect-ratio: 1/1;
+  height: 25vh;
+  font-size: 0.8em;
+  padding: 1vh;
+}
+#score {
+  font-size: 4em;
+  color: white;
+  font-family: Hank-eb;
+}
+#info {
+  font-size: 0.7em;
+  padding: 1vh 4vw;
+  text-align: justify;
+}
+.circle + p {
+  color: white;
+  font-size: 1.5em;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 1.5vw;
+}
+.right > p {
+  color: var(--btn);
+  font-family: Hank-b;
+  margin: 1vh 0;
+  font-size: 1.3em;
+}
+.card {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 0.5vh 0.5vw;
+  width: 100%;
+  height: 12%;
+  margin: 1vh 0;
+  border-radius: 10px;
+  font-size: clamp(10px,0.8em, 1em);
+}
+.card img {
+  width: 1.2em;
+  aspect-ratio: 1/1;
+}
+.card p {
+  margin: 0 1vw;
+}
+.card span {
+  position: absolute;
+  right: 8%;
+  color: var(--txt);
+}
+.card span p {
+  color: var(--btn);
+  display: inline;
+  margin: 0;
+}
+.reaction {
+  color: var(--red);
+  background-color: var(--l-red);
+}
+.memory {
+  color: var(--yellow);
+  background-color: var(--l-yellow);
+}
+.verbal {
+  color: var(--green);
+  background-color: var(--l-green);
+}
+.visual {
+  color: var(--blue);
+  background-color: var(--l-blue);
+}
+.right button {
+  border: 0;
+  margin-top: 6vh;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  background-color: var(--btn);
+  border-radius: 18px;
+  color: white;
+  transition: all 600ms;
+}
+.right button:hover{
+  transform: translateY(-10%);
+  background-image: linear-gradient(to top, var(--active-blue) 50%, var(--active-l-blue) 100%);
+}
+@media screen and (max-width: 500px){
+  .main{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  .left{
+    height: 45vh;
+    border-radius: 0 0 20px 20px;
+  }
+  .left #info{
+    padding: 2vh 20vw;
+  }
+  .circle{
+    height: 20vh;
+  }
+  .right{
+       padding: 2vh 10vw;
+  }
+  .right > p{
+    margin-bottom: 2vh;
+  }
+  .card{
+    height: 6vh;
+    padding: 2vh;
+    font-size: .9em;
+  }
+  .card p{
+    margin: 0 2vw;
+  }
+  .right button{
+    height: 6vh;
+    margin-top: 3vh;
+  }
+  }
