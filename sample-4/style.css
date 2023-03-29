@@ -53,6 +53,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 45vw;
+  min-width: 500px;
   aspect-ratio: 16/11;
   border-radius: 17px;
   background: #ffffff;
@@ -177,6 +178,7 @@ main {
     display: block;
     height: 100%;
     width: 100%;
+    min-width: 100%;
   }
   .left{
     height: 45vh;
