@@ -13,7 +13,6 @@
   transition: all 600ms;
   font-family: "Epilogue", sans-serif;
   color: var(--grey);
-  border: 1px solid lightblue;
 }
 body {
   background-color: var(--white);
