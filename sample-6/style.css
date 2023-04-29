@@ -23,13 +23,29 @@ nav {
   margin: 3vh 1vw;
   font-size: 0.8em;
   align-items: center;
+  width: 95%;
 }
-nav ul {
+.ul {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  margin-left: 3vw;
+  width: 80%;
+}
+#menu > ul {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-  width: 40%;
+  width: 100%;
   margin: 0 1vw;
+}
+#menu {
+  display: flex;
+  width: 85%;
+  align-items: center;
+}
+#menu-img {
+  display: none;
 }
 li {
   position: relative;
@@ -51,9 +67,9 @@ nav li:hover {
   border-radius: 8px;
   background-color: white;
   box-shadow: 6px 6px 20px #b1b1b1;
-  margin-top: 2vh;
+  top: 2vh;
+  left: 50%;
   display: none;
-  top: 0;
 }
 .features {
   height: 20vh;
@@ -88,8 +104,8 @@ nav li:hover {
   display: flex;
   justify-content: space-evenly;
   width: 20%;
-  margin-left: 27vw;
   align-items: center;
+  margin-left: auto;
 }
 .log p:last-child {
   border: 2px solid var(--grey);
@@ -153,22 +169,93 @@ main {
   height: 2vw;
 }
 .right {
+  display: flex;
   margin-left: 8vw;
 }
 .right img {
   height: 80vh;
+  margin: 0 6vw;
+  margin-left: auto;
 }
 
 @media (max-width: 480px) {
-  nav ul {
+  #menu {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    height: 100vh;
+    width: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+  }
+  #before {
+    display: none;
+    position: absolute;
+    width: 90vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.7;
+  }
+  #menu-img {
+    display: block;
+    margin: 0 4vw;
+    margin-left: auto;
+    z-index: 2;
+  }
+  #menu > ul,
+  .log {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5em;
+    background-color: white;
+    height: 70vh;
+    width: 85%;
+    right: 5%;
+    top: 10%;
+    font-size: 1.5em;
+  }
+  .ul {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .log {
+    position: static;
+    height: 15vh;
+    top: 38%;
+    margin: 0;
+    font-size: 0.9em;
+  }
+  .log p:last-child {
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+  }
+  .features,
+  .company {
+    position: static;
+    margin-top: 2vh;
+    width: 100%;
+    box-shadow: none;
+    padding-left: 10%;
+  }
+  .features ul,
+  .company ul {
+    width: 100%;
+    font-size: 0.9em;
+  }
+  .features img {
+    height: 5vw;
+    margin-right: 2vw;
   }
   nav > img {
     margin-left: 3vw;
-  }
-  .log {
-    width: 40%;
-    margin-left: auto;
   }
   main {
     display: flex;
